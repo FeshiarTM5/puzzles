@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function(){
     let con = document.getElementsByTagName("div")[0];
     let el = document.getElementsByTagName("div")[1];
     const socket = new WebSocket("wss://puzzles-service.onrender.com");
+    let p = document.getElementsByTagName("p")[0];
     document.addEventListener("click", function(event) {
         let x = event.clientX;
         let y = event.clientY;
@@ -23,10 +24,11 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     
     socket.onmessage = ({data}) => {
+        p.innerHTML = 1;
         data.text().then((conv) => {
             let xV = conv.substring(0, conv.indexOf(","));
             let yV = conv.substring(conv.indexOf(",") + 1, conv.length);
-        el.style.transform = "translate(" + xV + "px, " + yV + "px)";
+            el.style.transform = "translate(" + xV + "px, " + yV + "px)";
         });
     };
 });
