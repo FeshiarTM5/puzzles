@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(){
     let con = document.getElementsByTagName("div")[0];
     let el = document.getElementsByTagName("div")[1];
-    const socket = new WebSocket("ws://localhost:3002");
+    const socket = new WebSocket("wss://puzzles-service.onrender.com");
     document.addEventListener("click", function(event) {
         let x = event.clientX;
         let y = event.clientY;
