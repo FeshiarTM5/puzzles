@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
     let con = document.getElementsByTagName("div")[0];
     let el = document.getElementsByTagName("div")[1];
-    let para = document.getElementsByTagName("p")[0];
     const socket = new WebSocket("ws://localhost:3002");
     document.addEventListener("click", function(event) {
         let x = event.clientX;
