@@ -24,7 +24,6 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     
     socket.onmessage = ({data}) => {
-        p.innerHTML = 1;
         data.text().then((conv) => {
             let xV = conv.substring(0, conv.indexOf(","));
             let yV = conv.substring(conv.indexOf(",") + 1, conv.length);
