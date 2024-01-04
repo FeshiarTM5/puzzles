@@ -3,7 +3,6 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
 }
 .element{
     position: absolute;
@@ -13,7 +12,6 @@ body{
     border-radius: 2px;
 }
 .container{
-    overflow: hidden;
     background: rgb(246, 187, 59);
     border-radius: 2px;
     width: 600px;
