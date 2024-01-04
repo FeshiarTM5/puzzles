@@ -106,12 +106,14 @@ document.addEventListener("DOMContentLoaded", function(){
         }
     });
     document.addEventListener("keydown", (event) => {
-        if (event.key == 'r') {
+        if (event.key == 'r' || event.key == 'к') {
             socket.send(1);
         }
-        if (event.key == 'q') {
+        if (event.key == 'q' || event.key == 'й') {
             click = 0;
             el.style.boxShadow = "";
+            sh.style.left = el.offsetLeft;
+            sh.style.top = el.offsetTop;
         }
     });
     socket.onmessage = ({data}) => {
