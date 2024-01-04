@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function(){
     sh.classList.add("element");
     document.body.appendChild(sh);
     sh.style.opacity = "50%";
+    sh.style.background = "#9e9a9a";
     el.style.left = con.offsetLeft;
     el.style.top = con.offsetTop;
     sh.style.left = con.offsetLeft;
@@ -118,6 +119,10 @@ document.addEventListener("DOMContentLoaded", function(){
             if(conv.indexOf(",") != -1){
                 el.style.left = parseInt(conv.substring(0, conv.indexOf(","))) + parseInt(con.offsetLeft);
                 el.style.top = parseInt(conv.substring(conv.indexOf(",") + 1, conv.length)) + parseInt(con.offsetTop);
+                setTimeout(function(){
+                    sh.style.left = parseInt(conv.substring(0, conv.indexOf(","))) + parseInt(con.offsetLeft);
+                    sh.style.top = parseInt(conv.substring(conv.indexOf(",") + 1, conv.length)) + parseInt(con.offsetTop);
+                }, 200);
             }
             if(conv == "1"){
                 rotate[0] += 45;
